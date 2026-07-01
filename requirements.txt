@@ -1,0 +1,7 @@
+Django>=5.0,<6.0
+channels>=4.0
+channels_redis>=4.2
+daphne>=4.1
+psycopg2-binary>=2.9
+python-decouple>=3.8
+dj-database-url>=2.2
