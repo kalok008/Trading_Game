@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Football Elo Market{% endblock %}</title>
+  <link rel="stylesheet" href="/static/css/app.css">
+</head>
+<body>
+  <nav>
+    <a href="/">Home</a>
+    {% if user.is_authenticated %}
+      <span>{{ user.username }}</span> — <a href="{% url 'accounts:logout' %}">Log out</a>
+    {% else %}
+      <a href="{% url 'accounts:login' %}">Log in</a>
+    {% endif %}
+  </nav>
+  <main>{% block content %}{% endblock %}</main>
+</body>
+</html>
